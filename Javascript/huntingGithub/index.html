@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Github</title>
+</head>
+<body>
+    <button class="btn">Hunting</button>
+
+    <p class="naming"></p>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(".btn").click(function(){
+            $.get("https://api.github.com/users/emad998", function(data){     
+                myName = data.login;
+                $(".naming").append(myName)
+            });
+
+
+        })
+
+        
+
+    </script>
+    
+</body>
+</html>
