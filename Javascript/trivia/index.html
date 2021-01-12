@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia</title>
+</head>
+<body>
+    <button class="btn">Generate Questions</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(".btn").click(function (){
+            $.get("https://opentdb.com/api.php?amount=10", function(data){     
+            
+            
+            for (var i=0; i<data.results.length; i++){
+                var headingOne = document.createElement('h1')
+                headingOne.innerHTML = data.results[i].category
+
+                var questionH3 = document.createElement('h3')
+                questionH3.innerHTML = data.results[i].question
+
+                var answerH5 = document.createElement('h5')
+                answerH5.innerHTML = data.results[i].correct_answer
+
+
+                $("body").append(headingOne)
+                $("body").append(questionH3)
+                $("body").append(answerH5)
+
+
+            }
+            
+    });
+
+
+        })
+
+    </script>
+</body>
+</html>
