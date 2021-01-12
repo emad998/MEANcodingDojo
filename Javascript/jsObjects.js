@@ -58,3 +58,4 @@ function namingCharactersCount(obj){
 console.log(namingCharactersCount(users));
 */
 
+
