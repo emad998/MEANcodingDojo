@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat1</title>
+</head>
+<body>
+    <h1>Cat2</h1>
+    <img src="/images/cat2.jpg" alt="cat 2">
+    <h3>Food: <%= food %></h3>
+    <h3>Age: <%= age %></h3>
+    <h3>Sleeping Spots</h3>
+        <ul>
+            <% for (var x of sleeping_spots) { %>
+                <li><%= x %></li>
+            <% } %>
+        </ul>
+
+   
+</body>
+</html>
