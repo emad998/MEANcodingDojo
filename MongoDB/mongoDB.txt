@@ -1,0 +1,10 @@
+1. use my_first_db
+2. db.createCollection('students')
+3. db.students.insert
+4. added five students
+5. db.students.find()
+6. db.students.find({home_state: 'California'})
+7. db.students.find({$or: [{home_state: 'California'}, {home_state: 'Texas'}]})
+8. db.students.find({lucky_number: {$gt: 3}})
+9. db.students.update({name: 'Bab'}, {$set: {interests: ['coding', 'help']}})
+10. db.students.remove({home_state: 'New york'})
