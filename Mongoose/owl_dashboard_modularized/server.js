@@ -4,10 +4,6 @@ const path = require("path");
 
 const app = express();
 const bodyParser = require('body-parser');
-const session = require('express-session');
-const flash = require('express-flash');
-const mongoose = require('mongoose');
-
 
 
 const databaseConnection = require('./server/config/mongoose')
@@ -15,18 +11,12 @@ databaseConnection.mongoConnection;
 
 
 
-
-app.use(session({secret: 'codingdojorocks'})); 
-app.use(flash());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/static"));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs'); 
 
 require('./server/config/routes.js')(app)
-
-
-
 
 
 app.listen(8000, function() {
